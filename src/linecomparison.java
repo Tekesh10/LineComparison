@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class linecomparison {
     public static void main(String[] args) {
+
         System.out.println("Welcome to Line Comparison Computation Program");
 
         Scanner sc = new Scanner(System.in);
@@ -16,8 +17,8 @@ public class linecomparison {
         System.out.println("y2 coordinate");
         int y2 = sc.nextInt();
 
-        double lineLengthXY = Math.sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1));
-        System.out.println("Length of the line XY is => "+lineLengthXY);
+        double lineLengthXY = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        System.out.println("Length of the line XY is => " + lineLengthXY);
 
         System.out.println("Enter the value of line AB");
         System.out.println("x1 coordinate");
@@ -29,11 +30,17 @@ public class linecomparison {
         System.out.println("y2 coordinate");
         int b2 = sc.nextInt();
 
-        double lineLengthAB = Math.sqrt((a2 - a1)*(a2 - a1) + (b2 - b1)*(b2 - b1));
+        double lineLengthAB = Math.sqrt((a2 - a1) * (a2 - a1) + (b2 - b1) * (b2 - b1));
+        String l1 = String.valueOf(lineLengthXY);
+        String l2 = String.valueOf(lineLengthAB);
+        int i = l1.compareTo(l2);
 
-        if (lineLengthXY == lineLengthAB)
-            System.out.println("Both lines are equal");
-        else
-            System.out.println("Both lines are not equal");
+        if (i == 0) {
+            System.out.println("Both lines are Equal");
+        } else if (i > 0) {
+            System.out.println("Line XY is Greater than line AB");
+        } else {
+            System.out.println("Line XY is Smaller than line AB");
+        }
     }
 }
