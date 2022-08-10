@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class linecomparison {
     public static void main(String[] args) {
-
         System.out.println("Welcome to Line Comparison Computation Program");
 
         Scanner sc = new Scanner(System.in);
@@ -30,10 +29,10 @@ public class linecomparison {
         int b2 = sc.nextInt();
         double lineLengthAB = Math.sqrt((a2 - a1) * (a2 - a1) + (b2 - b1) * (b2 - b1));
         System.out.println("Length of the line AB is => " + lineLengthAB);
-        
-        String l1 = String.valueOf(lineLengthXY);
-        String l2 = String.valueOf(lineLengthAB);
-        System.out.println(l1.equals(l2));
-        System.out.println(l1.compareTo(l2));
+
+        Double lineOne = lineLengthXY;
+        Double lineTwo = lineLengthAB;
+        System.out.println(lineOne.equals(lineTwo));
+        System.out.println(lineOne.compareTo(lineTwo));
     }
 }
